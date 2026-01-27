@@ -7,7 +7,7 @@ import { AiOutlineMenu, AiOutlineClose, AiOutlineDown } from 'react-icons/ai'
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [inventoryOpen, setInventoryOpen] = useState(false)
-  const width = window.innerWidth
+  
 
    
 
