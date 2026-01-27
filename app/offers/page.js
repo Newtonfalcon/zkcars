@@ -3,6 +3,7 @@
 import React from 'react';
 import { MapPin, Phone, Instagram, MessageCircle, Award, Users, Car, Shield, Clock, TrendingUp } from 'lucide-react';
 import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 export default function AboutUs() {
   // Company data array for easy editing
@@ -63,6 +64,7 @@ export default function AboutUs() {
 
   return (
       <>
+      <Navbar/>
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Instagram, MessageCircle, Mail, Clock, Send, CheckCircle } from 'lucide-react';
 import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -120,6 +121,7 @@ export default function ContactUs() {
 
   return (
       <>
+      <Navbar/>
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20 px-4 overflow-hidden">

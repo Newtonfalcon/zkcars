@@ -16,6 +16,7 @@ import {
   Users,
 } from "lucide-react";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 export default function Services() {
   // Tailwind-safe color map (IMPORTANT for production builds)
@@ -236,6 +237,7 @@ export default function Services() {
 
   return (
       <>
+      <Navbar/>
     <div className="min-h-screen bg-white">
       {/* VEHICLE TYPES */}
       <div className="py-24 px-4">

@@ -7,9 +7,13 @@ import { AiOutlineMenu, AiOutlineClose, AiOutlineDown } from 'react-icons/ai'
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [inventoryOpen, setInventoryOpen] = useState(false)
+  const width = window.innerWidth
+
+   
+
 
   return (
-    <header className="fixed top-0 z-50 w-full backdrop-blur-md bg-white/30 border-b border-neutral-200 font-titillium">
+    <header className="fixed top-0 z-50 w-full backdrop-blur-md bg-white border-b border-neutral-200 font-titillium">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
         {/* Logo */}
