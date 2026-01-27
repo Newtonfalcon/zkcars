@@ -25,15 +25,15 @@ export const metadata = {
   metadataBase: new URL("https://zakicars.com"), // change when domain is live
 
   title: {
-    default: "Zaki Cars | Premium Automotive Dealership",
-    template: "%s | Zaki Cars",
+    default: "ZK Cars | Premium Automotive Dealership",
+    template: "%s | Zk Cars",
   },
 
   description:
-    "Zaki Cars is a premium automotive dealership offering luxury electric and fuel vehicles, flexible financing, trade-ins, and expert after-sales support.",
+    "ZK Cars is a premium automotive dealership offering luxury electric and fuel vehicles, flexible financing, trade-ins, and expert after-sales support.",
 
   keywords: [
-    "Zaki Cars",
+    "ZK Cars",
     "Car dealership Nigeria",
     "Luxury cars",
     "Electric vehicles Nigeria",
@@ -43,21 +43,21 @@ export const metadata = {
     "Auto sales",
   ],
 
-  authors: [{ name: "Zaki Cars" }],
-  creator: "Zaki Cars",
+  authors: [{ name: "Zk Cars" }],
+  creator: "Zk Cars",
 
   openGraph: {
-    title: "Zaki Cars | Premium Automotive Dealership",
+    title: "Zk Cars | Premium Automotive Dealership",
     description:
       "Discover premium electric and fuel vehicles with expert support, financing, and after-sales service at Zaki Cars.",
     url: "https://zakicars.com",
     siteName: "Zaki Cars",
     images: [
       {
-        url: "/logo.png", // your logo in /public
+        url: "/logo.jpeg", // your logo in /public
         width: 1200,
         height: 630,
-        alt: "Zaki Cars Logo",
+        alt: "Zk Cars Logo",
       },
     ],
     locale: "en_NG",
@@ -69,13 +69,13 @@ export const metadata = {
     title: "Zaki Cars | Premium Automotive Dealership",
     description:
       "Luxury electric and fuel vehicles with flexible financing and expert support.",
-    images: ["/logo.png"],
+    images: ["/logo.jpeg"],
   },
 
   icons: {
     icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    shortcut: "/logo.jpeg",
+    apple: "/logo.jpeg",
   },
 
   robots: {
