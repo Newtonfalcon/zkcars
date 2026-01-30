@@ -6,13 +6,13 @@ import { SiAudi, SiBmw, SiMercedes, SiVolkswagen, SiRenault, SiVolvo, SiNissan, 
 export default function ZKCarsBrands() {
   // Brand data with icons or image URLs
   const brands = [
-    { name: 'Alpine', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Alpine_logo.svg/200px-Alpine_logo.svg.png' },
+    { name: 'Alpine', icon: '/images/alpine.png' },
     { name: 'Audi', Icon: SiAudi },
     { name: 'BMW', Icon: SiBmw },
-    { name: 'BMW Motorrad', icon: 'https://logos-world.net/wp-content/uploads/2021/03/BMW-Motorrad-Logo.png' },
-    { name: 'BYD', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/BYD_Company_Logo.svg/200px-BYD_Company_Logo.svg.png' },
-    { name: 'Cupra', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/CUPRA_Logo.svg/200px-CUPRA_Logo.svg.png' },
-    { name: 'Dacia', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Dacia_Logo.svg/200px-Dacia_Logo.svg.png' },
+    { name: 'BMW Motorrad', icon: '/images/bmw1.png' },
+    { name: 'BYD', icon: '/images/byd.png' },
+    { name: 'Cupra', icon: '/images/cupra.png' },
+    { name: 'Dacia', icon: '/images/dacia.png' },
     { name: 'Clark Commercials', icon: 'https://via.placeholder.com/120x60/1e40af/ffffff?text=Clark' },
     { name: 'Geely', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Geely_Logo.svg/200px-Geely_Logo.svg.png' },
     { name: 'Ineos Grenadier', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/INEOS_Grenadier_logo.svg/200px-INEOS_Grenadier_logo.svg.png' },
@@ -24,10 +24,11 @@ export default function ZKCarsBrands() {
     { name: 'MG', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MG_Motor.svg/200px-MG_Motor.svg.png' },
     { name: 'Mini', Icon: SiMini },
     { name: 'Nissan', Icon: SiNissan },
-    { name: "Clarkie's Campers", icon: 'https://via.placeholder.com/120x60/22c55e/ffffff?text=Clarkies' },
+    
+    { name: 'Mercedes-Benz', Icon: SiMercedes },
     { name: 'Renault', Icon: SiRenault },
-    { name: 'Seat', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/SEAT_Logo.svg/200px-SEAT_Logo.svg.png' },
-    { name: 'Skoda', icon: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Skoda_Auto_logo_%28china%29.svg/200px-Skoda_Auto_logo_%28china%29.svg.png' },
+    { name: 'Seat', icon: '/images/seat.png' },
+    { name: 'Skoda', icon: '/images/skoda.png' },
     { name: 'Volkswagen', Icon: SiVolkswagen },
     { name: 'Volvo', Icon: SiVolvo },
   ];
@@ -129,7 +130,7 @@ export default function ZKCarsBrands() {
           <p className="text-slate-400 mb-8">Explore our inventory or contact our team for personalized assistance</p>
           <div className="flex flex-wrap gap-4 justify-center">
             <button className="px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/50">
-              Browse Inventory
+             <a href="/products">Browse Inventory</a>
             </button>
             <button className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl border border-slate-700 transition-all duration-300 hover:scale-105">
               Contact Us
