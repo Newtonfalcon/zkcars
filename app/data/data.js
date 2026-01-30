@@ -13,7 +13,7 @@ export const carouselData = [
     id: 2,
     title: "Luxury in Motion",
     subtitle: "Experience unmatched comfort and design with our curated selection of luxury cars.",
-    image: "/images/avatr-banner-img.jpg", // replace with your actual link
+    image: "https://i.pinimg.com/736x/ea/3d/5b/ea3d5b5bd1f636b580babc3e1518c3d8.jpg", // replace with your actual link
     ctaText: "View Luxury Collection",
     ctaLink: "/inventory/luxury",
   },

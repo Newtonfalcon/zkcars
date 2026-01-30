@@ -61,6 +61,10 @@ export default function Navbar() {
             Services
           </Link>
 
+           <Link href="/products" className="nav-link">
+            Products
+          </Link>
+
           <Link href="/about" className="nav-link">
             About
           </Link>
@@ -122,6 +126,9 @@ export default function Navbar() {
 
           <Link href="/services" className="block text-lg font-medium">
             Services
+          </Link>
+          <Link href="/products" className="block text-lg font-medium">
+            Products
           </Link>
 
           <Link href="/about" className="block text-lg font-medium">
