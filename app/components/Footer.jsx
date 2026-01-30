@@ -44,13 +44,13 @@ export default function Footer() {
       { name: 'What We Offer', href: '/offers' },
       { name: 'About Us', href: '/about' },
       { name: 'Contact Us', href: '/contactus' },
-      { name: 'Browse Brands', href: '/service' }
+      { name: 'Browse Brands', href: '/products' }
     ],
     
     services: [
-      { name: 'New Vehicles', href: '/' },
-      { name: 'Used Vehicles', href: '/' },
-      { name: 'Financing Options', href: '/' },
+      { name: 'New Vehicles', href: '/products' },
+      { name: 'Used Vehicles', href: '/offers' },
+      { name: 'Financing Options', href: '/services' },
       { name: 'Trade-In', href: '/' },
       { name: 'After Sales Service', href: '/service' }
     ],
