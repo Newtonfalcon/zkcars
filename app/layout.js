@@ -22,7 +22,7 @@ const titillium = Titillium_Web({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://zakicars.com"), // change when domain is live
+  metadataBase: new URL("https://zk-cars.vercel.app"), // change when domain is live
 
   title: {
     default: "ZK Cars | Premium Automotive Dealership",
@@ -50,8 +50,8 @@ export const metadata = {
     title: "Zk Cars | Premium Automotive Dealership",
     description:
       "Discover premium electric and fuel vehicles with expert support, financing, and after-sales service at Zaki Cars.",
-    url: "https://zakicars.com",
-    siteName: "Zaki Cars",
+    url: "https://zk-cars.vercel.app/",
+    siteName: "Zk Cars",
     images: [
       {
         url: "/logo.jpeg", // your logo in /public
@@ -73,7 +73,7 @@ export const metadata = {
   },
 
   icons: {
-    icon: "/logo.png",
+    icon: "/logo.jpeg",
     shortcut: "/logo.jpeg",
     apple: "/logo.jpeg",
   },
