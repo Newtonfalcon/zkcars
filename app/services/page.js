@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { Zap, Fuel, ShieldCheck, CreditCard, RefreshCw, Wrench, Award, HeadphonesIcon, TrendingUp, CheckCircle, Car, Users } from 'lucide-react';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 export default function Services() {
   // Services data array for easy editing
@@ -83,7 +85,7 @@ export default function Services() {
         icon: CreditCard,
         title: 'Flexible Financing',
         description: 'We partner with leading financial institutions to offer tailored financing solutions that fit your budget. Drive your dream car today with our flexible payment plans.',
-        image: 'https://images.unsplash.com/photo-1554224311-beee460201b4?w=600&q=80',
+        image: 'https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         benefits: [
           'Competitive Rates',
           'Flexible Terms',
@@ -188,6 +190,8 @@ export default function Services() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="relative h-[600px] overflow-hidden">
@@ -452,5 +456,8 @@ export default function Services() {
         </div>
       </div>
     </div>
+
+  <Footer/>
+  </>
   );
 }

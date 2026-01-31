@@ -346,10 +346,10 @@ export default function TulaMotoShowcase() {
               Contact Sales
             </button>
             <a
-              href="/mnt/user-data/uploads/Tula_doc_pdf__2__pdf_pdf.pdf"
-              download
-              className="inline-flex items-center gap-2 border-2 border-black text-black px-10 py-5 rounded-xl font-bold text-lg hover:bg-black hover:text-white transition-all duration-300 hover:scale-105"
-            >
+            href="/tula.pdf"
+            target='_blank'
+            className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105"
+          >
               <FileText className="w-6 h-6" />
               View Full Catalog
             </a>
