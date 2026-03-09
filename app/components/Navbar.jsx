@@ -7,26 +7,21 @@ import { AiOutlineMenu, AiOutlineClose, AiOutlineDown } from 'react-icons/ai'
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [inventoryOpen, setInventoryOpen] = useState(false)
-  
-
-   
-
 
   return (
-    <header className="fixed top-0 z-50 w-full backdrop-blur-md bg-white border-b border-neutral-200 font-titillium">
+    <header className="fixed top-0 z-50 w-full backdrop-blur-md bg-white/95 border-b border-neutral-200 font-titillium">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-neutral-800">
-          ZK<span className="text-gray-600 ">Cars</span>
+        <Link href="/" className="flex items-center gap-2">
+          <span className="text-2xl font-black text-neutral-900">ZK</span>
+          <span className="text-2xl font-black text-amber-500">Motors</span>
         </Link>
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center gap-8 text-neutral-800 font-medium text-sm">
 
-          <Link href="/" className="nav-link">
-            Home
-          </Link>
+          <Link href="/" className="nav-link">Home</Link>
 
           {/* Inventory Dropdown */}
           <div className="relative group">
@@ -39,46 +34,39 @@ export default function Navbar() {
             </button>
 
             <div
-              className={`absolute top-8 left-0 w-40 rounded-md bg-white shadow-lg transition-all duration-300 ease-in-out
-                ${inventoryOpen ? "opacity-100 visible" : "opacity-0 invisible"}
+              className={`absolute top-8 left-0 w-44 rounded-xl bg-white shadow-xl border border-slate-100 transition-all duration-300 ease-in-out
+                ${inventoryOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"}
               `}
               onMouseEnter={() => setInventoryOpen(true)}
               onMouseLeave={() => setInventoryOpen(false)}
             >
-              <Link href="/offers" className="block px-4 py-2 hover:bg-neutral-100">
-                All Cars
-              </Link>
-              <Link href="/offers" className="block px-4 py-2 hover:bg-neutral-100">
-                Electric
-              </Link>
-              <Link href="/offers" className="block px-4 py-2 hover:bg-neutral-100">
-                Luxury
-              </Link>
+              <Link href="/offers" className="block px-4 py-3 hover:bg-amber-50 hover:text-amber-700 transition-colors rounded-t-xl font-medium">All Cars</Link>
+              <Link href="/offers" className="block px-4 py-3 hover:bg-amber-50 hover:text-amber-700 transition-colors font-medium">Electric</Link>
+              <Link href="/offers" className="block px-4 py-3 hover:bg-amber-50 hover:text-amber-700 transition-colors rounded-b-xl font-medium">Luxury</Link>
             </div>
           </div>
 
-          <Link href="/services" className="nav-link">
-            Services
+          <Link href="/hire-purchase" className="nav-link text-amber-600 font-bold">
+            Hire Purchase
           </Link>
 
-           <Link href="/products" className="nav-link">
-            Products
-          </Link>
-
-          <Link href="/about" className="nav-link">
-            About
-          </Link>
-
-          <Link href="/contactus" className="nav-link">
-            Contact
-          </Link>
+          <Link href="/services" className="nav-link">Services</Link>
+          <Link href="/products" className="nav-link">Products</Link>
+          <Link href="/about" className="nav-link">About</Link>
+          <Link href="/contactus" className="nav-link">Contact</Link>
         </div>
 
         {/* CTA Button */}
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex items-center gap-3">
+          <Link
+            href="/hire-purchase"
+            className="rounded-full bg-amber-500 hover:bg-amber-400 px-5 py-2 text-sm font-bold text-black transition-all hover:scale-105"
+          >
+            Apply for HP
+          </Link>
           <Link
             href="/offers"
-            className="rounded-full bg-indigo-500 px-5 py-2 text-sm font-semibold text-white hover:bg-indigo-600 transition"
+            className="rounded-full bg-slate-900 hover:bg-slate-800 px-5 py-2 text-sm font-semibold text-white transition"
           >
             Shop Now
           </Link>
@@ -95,12 +83,9 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-white/95 backdrop-blur-md text-neutral-900 px-6 py-8 space-y-4">
-          <Link href="/" className="block text-lg font-medium">
-            Home
-          </Link>
+        <div className="lg:hidden bg-white text-neutral-900 px-6 py-8 space-y-4 border-t border-slate-100 shadow-xl">
+          <Link href="/" className="block text-lg font-medium" onClick={() => setMobileOpen(false)}>Home</Link>
 
-          {/* Mobile dropdown logic */}
           <div className="space-y-2">
             <button
               className="flex w-full items-center justify-between text-lg font-medium"
@@ -108,43 +93,39 @@ export default function Navbar() {
             >
               Inventory <AiOutlineDown className="text-xl" />
             </button>
-
             {inventoryOpen && (
               <div className="ml-4 space-y-2">
-                <Link href="/offers" className="block text-base">
-                  All Cars
-                </Link>
-                <Link href="/offers" className="block text-base">
-                  Electric
-                </Link>
-                <Link href="/offers" className="block text-base">
-                  Luxury
-                </Link>
+                <Link href="/offers" className="block text-base" onClick={() => setMobileOpen(false)}>All Cars</Link>
+                <Link href="/offers" className="block text-base" onClick={() => setMobileOpen(false)}>Electric</Link>
+                <Link href="/offers" className="block text-base" onClick={() => setMobileOpen(false)}>Luxury</Link>
               </div>
             )}
           </div>
 
-          <Link href="/services" className="block text-lg font-medium">
-            Services
+          <Link href="/hire-purchase" className="block text-lg font-bold text-amber-600" onClick={() => setMobileOpen(false)}>
+            🎯 Hire Purchase
           </Link>
-          <Link href="/products" className="block text-lg font-medium">
-            Products
-          </Link>
+          <Link href="/services" className="block text-lg font-medium" onClick={() => setMobileOpen(false)}>Services</Link>
+          <Link href="/products" className="block text-lg font-medium" onClick={() => setMobileOpen(false)}>Products</Link>
+          <Link href="/about" className="block text-lg font-medium" onClick={() => setMobileOpen(false)}>About</Link>
+          <Link href="/contactus" className="block text-lg font-medium" onClick={() => setMobileOpen(false)}>Contact</Link>
 
-          <Link href="/about" className="block text-lg font-medium">
-            About
-          </Link>
-
-          <Link href="/contactus" className="block text-lg font-medium">
-            Contact
-          </Link>
-
-          <Link
-            href="/offers"
-            className="block mt-4 rounded-full bg-indigo-500 px-5 py-2 text-center text-white"
-          >
-            Shop Now
-          </Link>
+          <div className="flex flex-col gap-3 mt-4">
+            <Link
+              href="/hire-purchase"
+              className="block rounded-full bg-amber-500 px-5 py-3 text-center text-black font-bold"
+              onClick={() => setMobileOpen(false)}
+            >
+              Apply for Hire Purchase
+            </Link>
+            <Link
+              href="/offers"
+              className="block rounded-full bg-slate-900 px-5 py-3 text-center text-white font-semibold"
+              onClick={() => setMobileOpen(false)}
+            >
+              Browse Inventory
+            </Link>
+          </div>
         </div>
       )}
     </header>

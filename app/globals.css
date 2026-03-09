@@ -1,8 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&display=swap');
 @import "tailwindcss";
 
-/* -------------------------
-   Color & Theme Variables
-------------------------- */
+/* \u2500\u2500\u2500 Variables \u2500\u2500\u2500 */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -13,10 +12,9 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-titillium: var(--font-titillium); /* Added Titillium Web */
+  --font-titillium: var(--font-titillium);
 }
 
-/* Dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -24,26 +22,21 @@
   }
 }
 
-/* -------------------------
-   Body & Global Font
-------------------------- */
+/* \u2500\u2500\u2500 Body \u2500\u2500\u2500 */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-titillium), Arial, Helvetica, sans-serif; /* Use Titillium Web globally */
+  font-family: var(--font-titillium), 'Helvetica Neue', Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* -------------------------
-   Animated underlines
-------------------------- */
+/* \u2500\u2500\u2500 Nav links \u2500\u2500\u2500 */
 .nav-link {
   position: relative;
   padding-bottom: 4px;
   transition: color 0.3s;
 }
-
 .nav-link::after {
   content: '';
   position: absolute;
@@ -51,10 +44,14 @@ body {
   bottom: -2px;
   width: 0%;
   height: 2px;
-  background: #6366f1;
+  background: #10b981;
   transition: width 0.3s ease;
 }
-
 .nav-link:hover::after {
   width: 100%;
+}
+
+/* \u2500\u2500\u2500 Smooth scroll \u2500\u2500\u2500 */
+html {
+  scroll-behavior: smooth;
 }
