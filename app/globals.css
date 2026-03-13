@@ -1,40 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
-/* \u2500\u2500\u2500 Variables \u2500\u2500\u2500 */
+/* ─── Color Tokens ─── */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a0a0a;
+
+  /* ZK Brand */
+  --zk-black: #0a0a0a;
+  --zk-charcoal: #1a1a1a;
+  --zk-grey: #6b7280;
+  --zk-light-grey: #f4f4f5;
+  --zk-accent: #7c6af7;        /* light blueish-purple replacing amber/yellow */
+  --zk-accent-light: #a594f9;
+  --zk-accent-dark: #5b4de0;
+  --zk-green: #10b981;
+  --zk-white: #ffffff;
+
+  /* Typography scale */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
-  --font-titillium: var(--font-titillium);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-/* \u2500\u2500\u2500 Body \u2500\u2500\u2500 */
+/* ─── Base ─── */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-titillium), 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: var(--font-body), 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* \u2500\u2500\u2500 Nav links \u2500\u2500\u2500 */
+/* ─── Typography ─── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* H1 - 48-64px Montserrat Bold */
+h1 {
+  font-size: clamp(2.75rem, 5vw, 4rem);
+  font-weight: 800;
+}
+
+/* H2 - 32-40px Montserrat SemiBold */
+h2 {
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+}
+
+/* H3 - 24-28px Montserrat Medium */
+h3 {
+  font-size: clamp(1.5rem, 2.5vw, 1.75rem);
+  font-weight: 600;
+}
+
+/* Body */
+p {
+  font-family: var(--font-body), sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--zk-grey);
+}
+
+/* ─── Nav links ─── */
 .nav-link {
   position: relative;
   padding-bottom: 4px;
+  font-family: var(--font-body), sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
   transition: color 0.3s;
 }
 .nav-link::after {
@@ -44,14 +90,36 @@ body {
   bottom: -2px;
   width: 0%;
   height: 2px;
-  background: #10b981;
+  background: var(--zk-accent);
   transition: width 0.3s ease;
 }
 .nav-link:hover::after {
   width: 100%;
 }
 
-/* \u2500\u2500\u2500 Smooth scroll \u2500\u2500\u2500 */
+/* ─── CTA Button base ─── */
+.btn-primary {
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ─── Accent color utility classes ─── */
+.text-accent { color: var(--zk-accent); }
+.bg-accent { background-color: var(--zk-accent); }
+.border-accent { border-color: var(--zk-accent); }
+.text-accent-light { color: var(--zk-accent-light); }
+.bg-accent-dark { background-color: var(--zk-accent-dark); }
+
+/* ─── Smooth scroll ─── */
 html {
   scroll-behavior: smooth;
+}
+
+/* ─── Footer text ─── */
+footer {
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.875rem;
 }

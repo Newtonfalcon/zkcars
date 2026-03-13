@@ -1,63 +1,61 @@
-import { Geist, Geist_Mono, Titillium_Web } from "next/font/google";
+import { Geist_Mono, Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 
-// Geist Sans
-const geistSans = Geist({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-inter",
 });
 
-// Geist Mono
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  variable: "--font-montserrat",
+});
+
 const geistMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-geist-mono",
 });
 
-// Titillium Web
-const titillium = Titillium_Web({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  display: "swap",
-  variable: "--font-titillium",
-});
-
 export const metadata = {
-  metadataBase: new URL("https://zk-cars.vercel.app"), // change when domain is live
+  metadataBase: new URL("https://zk-cars.vercel.app"),
 
   title: {
-    default: "ZK Cars | Premium Automotive Dealership",
-    template: "%s | Zk Cars",
+    default: "ZK Motors | Premium Automotive Dealership",
+    template: "%s | ZK Motors",
   },
 
   description:
-    "ZK Cars is a premium automotive dealership offering luxury electric and fuel vehicles, flexible financing, trade-ins, and expert after-sales support.",
+    "ZK Motors is a premier automotive dealership offering quality vehicles from world-renowned brands across Northern Nigeria, with flexible Hire Purchase financing.",
 
   keywords: [
-    "ZK Cars",
+    "ZK Motors",
     "Car dealership Nigeria",
-    "Luxury cars",
+    "Luxury cars Northern Nigeria",
     "Electric vehicles Nigeria",
-    "Fuel cars",
-    "Used cars",
-    "Car financing",
-    "Auto sales",
+    "Hire Purchase cars Nigeria",
+    "Auto sales Kano",
+    "ZK Cars",
   ],
 
-  authors: [{ name: "Zk Cars" }],
-  creator: "Zk Cars",
+  authors: [{ name: "ZK Motors" }],
+  creator: "ZK Motors",
 
   openGraph: {
-    title: "Zk Cars | Premium Automotive Dealership",
+    title: "ZK Motors | Premium Automotive Dealership",
     description:
-      "Discover premium electric and fuel vehicles with expert support, financing, and after-sales service at Zaki Cars.",
+      "Premium vehicles from world-renowned brands with flexible Hire Purchase financing across Northern Nigeria.",
     url: "https://zk-cars.vercel.app/",
-    siteName: "Zk Cars",
+    siteName: "ZK Motors",
     images: [
       {
-        url: "/logo.jpeg", // your logo in /public
+        url: "/logo.jpeg",
         width: 1200,
         height: 630,
-        alt: "Zk Cars Logo",
+        alt: "ZK Motors Logo",
       },
     ],
     locale: "en_NG",
@@ -66,9 +64,9 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Zaki Cars | Premium Automotive Dealership",
+    title: "ZK Motors | Premium Automotive Dealership",
     description:
-      "Luxury electric and fuel vehicles with flexible financing and expert support.",
+      "Premium vehicles with flexible Hire Purchase financing across Northern Nigeria.",
     images: ["/logo.jpeg"],
   },
 
@@ -95,7 +93,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${titillium.variable} antialiased`}
+        className={`${inter.variable} ${montserrat.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
