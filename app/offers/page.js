@@ -38,7 +38,7 @@ export default function Offers() {
     leadership: {
       message: "We believe in building lasting relationships with our customers. At ZK Motors, you're not just buying a car — you're joining a family that cares about your automotive journey.",
       founders: "Augustine Sunday Obri & Jibril Umar Gabi",
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80'
+      image: '/logo.jpeg'
     }
   };
 
